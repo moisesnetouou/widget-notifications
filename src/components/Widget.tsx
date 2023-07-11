@@ -19,15 +19,18 @@ export function Widget(){
         </div>
 
         <div className="divide-y-2 divide-zinc-300 dark:divide-zinc-950">
-          <Notification 
-            text="Você recebeu um convite para fazer parte da empresa Rocketseat."
-            icon={Rocket}
-            hasActions
-          />
-          <Notification 
-            text="Você recebeu um convite para fazer parte da empresa Rocketseat."
-            icon={Rocket}
-          />
+          <Notification.Root>
+            <Notification.Icon icon={Rocket} />
+            <Notification.Content text="Você recebeu um convite para fazer parte da empresa Rocketseat." />
+            <Notification.Actions >
+              <Notification.Action icon={Check} onClick={() => {}} className="bg-emerald-600 dark:bg-emerald-600" />
+            </Notification.Actions>
+          </Notification.Root>
+          
+          <Notification.Root>
+            <Notification.Icon icon={Rocket} />
+            <Notification.Content text="Você recebeu um convite para fazer parte da empresa Rocketseat." />
+          </Notification.Root>
         </div>
       </div>
 
@@ -37,10 +40,13 @@ export function Widget(){
         </div>
 
         <div className="divide-y-2 divide-zinc-300 dark:divide-zinc-950">
-          <Notification 
-            text="Você recebeu um convite para fazer parte da empresa Rocketseat."
-            icon={Rocket}
-          />
+          <Notification.Root>
+            <Notification.Content text="Você recebeu um convite para fazer parte da empresa Rocketseat." />
+            <Notification.Actions>
+              <Notification.Action icon={X} onClick={() => {}}  />
+              <Notification.Action icon={Check} className="bg-violet-500 dark:bg-violet-500  hover:bg-violet-600" onClick={() => {}}  />
+            </Notification.Actions>
+          </Notification.Root>
         </div>
       </div>
     </div>
